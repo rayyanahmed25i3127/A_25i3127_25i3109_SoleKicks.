@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<header class="navbar" style="height: 100px;">
+        <div class="nav-left">
+            <img src="shoel.png" class="logo-img" />
+            <span class="logo-text">SoleKicks.</span>
+        </div>
+
+        <div class="nav-mid">
+            <button class="search">
+                <img src="search.png" class="search-icon">
+                Search here
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <a href="#"><img src="cart.png" class="cart"></a>
+            <img src="account.png" class="circle">
+            <img src="heart.png" class="heart">
+
+            <button class="btn" onclick="location.href='../contactus/contact.html';">CONTACT US</button>
+            <button class="btn" onclick="location.href='../home/home.html';">HOME</button>
+            <button class="btn" onclick="location.href='../signup/signup.html';">LOGIN</button>
+        </div>
+    </header>
+
+<div class="container">
+
+    <h1 class="title">MY CART</h1>
+
+    <h2 class="sub-title">TOTAL ORDERS</h2>
+    <hr class="divider">
+
+    <!-- 1st Product -->
+    <div class="cart-item">
+        
+        <button class="delete-btn">🗑️</button>
+
+        <img src="af1.png" alt="Nike Sneaker" style="border-radius: 20px;">
+
+        <div class="item-info">
+            <h3>Nike AirForce 1<br>Triple White - HIGH</h3>
+            <p>Article No 122</p>
+        </div>
+
+        <div class="price">PKR 7499/-</div>
+
+        <div class="qty-box">
+            <button>-</button>
+            <input type="number" value="1" min="1">
+            <button>+</button>
+        </div>
+    </div>
+
+    <!-- 2nd Product -->
+    <div class="cart-item">
+        
+        <button class="delete-btn">🗑️</button>
+
+        <img src="chelsea.png" alt="chelsea" style="border-radius: 20px;">
+
+        <div class="item-info">
+            <h3>Zara Man Chelsea<br>Black Formal</h3>
+            <p>Article No 231</p>
+        </div>
+
+        <div class="price">PKR 10,000/-</div>
+
+       <div class="qty-box">
+            <button>-</button>
+            <input type="number" value="1" min="1">
+            <button>+</button>
+        </div>
+    </div>
+    
+
+    <!-- Summary Box -->
+    <div class="summary-box">
+        <div class="row">
+            <span>SUBTOTAL</span>
+            <span>PKR 17,499/-</span>
+        </div>
+        <div class="row">
+            <span>SHIPPING PRICE</span>
+            <span>PKR 200/-</span>
+        </div>
+        <div class="row">
+            <span>QUANTITY</span>
+            <span>3</span>
+        </div>
+        <div class="row">
+            <span>TAX</span>
+            <span>PKR 800/-</span>
+        </div>
+        <div class="row total">
+            <span>TOTAL</span>
+            <span>PKR 18,499/-</span>
+        </div>
+    </div>
+
+    <div class="btn-row">
+        <button class="btn-1" onclick="location.href='../checkout/checkout.html';">CHECKOUT</button>
+        <button class="btn-1">CONTINUE SHOPPING</button>
+        <button class="btn-1">SAVE FOR LATER</button>
+    </div>
+
+</div>
+
+<footer class="footer">
+
+        <div class="footer-logo">
+            <img src="shoel.png" class="footer-img" />
+            <span class="footername">SoleKicks.</span>
+        </div>
+
+        <div class="footer-grid">
+
+            <!-- Quick Links -->
+            <div>
+                <h4>Quick Links</h4>
+                <a href="../aboutus/aboutus.html" style="color: gray;"><p class="para">About</p></a>
+                <a href="../faqs/faqs.html" style="color: gray;"><p class="para">FAQs</p></a>
+                <p class="para">Terms</p>
+                <p class="para">Privacy & Policy</p>
+                <p class="para">Returns</p>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4>Contact Us</h4>
+
+                <p class="para icon-row">
+                    <img src="mail.png" class="icon"> 
+                    Email: solekicks.pk@gmail.com
+                </p>
+
+                <p class="para icon-row">
+                    <img src="call.png" class="icon">
+                    Phone: 051-999-089
+                </p>
+
+                <p class="para icon-row">
+                    <img src="loc.png" class="icon">
+                    Opposite Ayub National Park, Rawalpindi.
+                </p>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h4>Social Media</h4>
+
+                <p class="para icon-row">
+                    <img src="ig.png" class="icon">
+                    Instagram
+                </p>
+
+                <p class="para icon-row">
+                    <img src="tw.png" class="icon">
+                    Twitter
+                </p>
+
+                <p class="para icon-row">
+                    <img src="ln.png" class="icon">
+                    LinkedIn
+                </p>
+
+                <p class="para icon-row">
+                    <img src="yt.png" class="icon">
+                    YouTube
+                </p>
+            </div>
+        </div>
+
+        <p class="copy">© All rights reserved.</p>
+    </footer>
+
+<script>
+    // DELETE ITEM FUNCTION
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+
+    deleteButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            btn.parentElement.remove(); // removes that entire cart item row
+        });
+    });
+</script>
+
+</body>
+</html>
