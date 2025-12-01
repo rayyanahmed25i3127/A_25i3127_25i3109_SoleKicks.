@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Solekicks</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../css/aboutus.css">
+</head>
+
+<body>
+
+    <!-- ---------- HEADER ---------- -->
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="../images/shoel.png" class="logo-img" />
+            <span class="logo-text">SoleKicks.</span>
+        </div>
+
+        <div class="nav-mid">
+            <button class="search">
+                <img src="../images/search.png" class="search-icon">
+                Search here
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <a href="cart.html"><img src="../images/cart.png" class="cart"></a>
+            <img src="../images/account.png" class="circle">
+            <img src="../images/heart.png" class="heart">
+
+            <button class="btn" onclick="location.href='contact.html';">CONTACT US</button>
+            <button class="btn" onclick="location.href='home.html';">HOME</button>
+            <button class="btn" onclick="location.href='signup.html';">LOGIN</button>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+
+        <h2 class="fade-in">WHO ARE WE?</h2>
+
+        <div class="about-flex fade-in">
+            <div class="about-text">
+                We are two aspiring entrepreneurs who are currently studying in FAST.
+                We were obsessed with shoes and boots but finding the right one and budget-friendly in the current
+                market was a headache.<br><br>
+                After this, Solekicks came into being to solve this problem.
+            </div>
+
+            <div>
+                <img src="../images/shahg.jpeg" class="about-imgr">
+                <p class="person-name">SYED RAYYAN SHAH</p>
+            </div>
+
+            <div>
+                <img src="../images/me.HEIC" class="about-img">
+                <p class="person-name">RAYYAN AHMED</p>
+            </div>
+        </div>
+
+        <!-- MISSION -->
+        <div class="mission fade-in">
+            <h3>MISSION</h3>
+            <p>
+                To provide comfort, budget, and brand every shoe lover deserves.
+            </p>
+        </div>
+
+        <!-- STANDINGS -->
+        <div class="standings fade-in">
+            <h3>OUR STANDINGS</h3>
+            <p>
+                No compromise on quality, keeping the word of mouth strong, and helping people find the right product.
+            </p>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div class="achievements fade-in">
+            <h3>OUR ACHIEVEMENTS</h3>
+
+            <div class="achievement-box">
+                ✔ Over 500+ satisfied sneaker lovers in our first months.
+            </div>
+            <div class="achievement-box">
+                ✔ Built strong trust with guaranteed original shoes.
+            </div>
+            <div class="achievement-box">
+                ✔ Recognized in our community for honest pricing & quality.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            <img src="../images/shoel.png" class="footer-img" />
+            <span class="footername">SoleKicks.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <a href="#" style="color: gray;"> <p class="para">About</p></a>
+                <a href="faqs.html" style="color: gray;"> <p class="para">FAQs</p></a>
+                <p class="para">Terms</p>
+                <p class="para">Privacy & Policy</p>
+                <p class="para">Returns</p>
+            </div>
+
+            <div>
+                <h4>Contact Us</h4>
+
+                <p class="para icon-row">
+                    <img src="../images/mail.png" class="icon">
+                    Email: solekicks.pk@gmail.com
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/call.png" class="icon">
+                    Phone: 051-999-089
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/loc.png" class="icon">
+                    Opposite Ayub National Park, Rawalpindi.
+                </p>
+            </div>
+
+            <div>
+                <h4>Social Media</h4>
+
+                <p class="para icon-row">
+                    <img src="../images/ig.png" class="icon">
+                    Instagram
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/tw.png" class="icon">
+                    Twitter
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/ln.png" class="icon">
+                    LinkedIn
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/yt.png" class="icon">
+                    YouTube
+                </p>
+            </div>
+        </div>
+
+        <p class="copy">© All rights reserved.</p>
+
+    </footer>
+
+
+    <!-- ---------- JAVASCRIPT ---------- -->
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        function fadeInOnScroll() {
+            fadeElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+    </script>
+
+</body>
+</html>
