@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoleKicks | Checkout</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body>
+
+    <!-- HEADER (same as your design) -->
+    <header class="navbar" style="height: 100px;">
+        <div class="nav-left">
+            <img src="../images/shoel.png" class="logo-img" />
+            <span class="logo-text">SoleKicks.</span>
+        </div>
+
+        <div class="nav-mid">
+            <button class="search">
+                <img src="../images/search.png" class="search-icon">
+                Search here
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <a href="cart.html"><img src="../images/cart.png" class="cart"></a>
+            <img src="../images/account.png" class="circle">
+            <img src="../images/heart.png" class="heart">
+
+            <button class="btn" onclick="location.href='contact.html';">CONTACT US</button>
+            <button class="btn" onclick="location.href='home.html';">HOME</button>
+            <button class="btn" onclick="location.href='signup.html';">LOGIN</button>
+        </div>
+    </header>
+
+
+    <!-- CHECKOUT SECTION -->
+    <section class="checkout-container">
+
+        <p class="title" style="font-size: 50px;">Checkout</p>
+
+        <div class="checkout-grid">
+
+            <!-- LEFT: SHIPPING FORM -->
+            <div class="shipping-box">
+                <h3>Shipping Details</h3>
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Phone Number</label>
+                <input type="text" placeholder="03XX-XXXXXXX" required>
+
+                <label>Address</label>
+                <textarea placeholder="Street, house no., area" required></textarea>
+
+                <label>City</label>
+                <input type="text" placeholder="Enter your city" required>
+
+                <label>Postal Code</label>
+                <input type="text" placeholder="ZIP / Postal code" required>
+            </div>
+            <!-- PAYMENT SECTION -->
+    <section class="payment-container">
+
+        <h2 class="title">Select Payment Method</h2>
+
+        <div class="payment-grid">
+
+            <!-- PayPal -->
+            <label class="payment-option">
+                <input type="radio" name="payment" />
+                <img src="../images/paypal.png" class="pay-icon">
+                <span>PayPal</span>
+            </label>
+
+            <!-- Mastercard -->
+            <label class="payment-option">
+                <input type="radio" name="payment" />
+                <img src="../images/mastercard.png" class="pay-icon">
+                <span>Mastercard</span>
+            </label>
+
+            <!-- Visa -->
+            <label class="payment-option">
+                <input type="radio" name="payment" />
+                <img src="../images/visa.png" class="pay-icon">
+                <span>Visa Card</span>
+            </label>
+
+            <!-- Apple Pay -->
+            <label class="payment-option">
+                <input type="radio" name="payment" />
+                <img src="../images/applepay.png" class="pay-icon">
+                <span>Apple Pay</span>
+            </label>
+
+        </div>
+
+         <button class="pay-btn">Continue to Payment</button> 
+
+    </section>
+
+
+
+            <!--  ORDER SUMMARY -->
+            <div class="summary-box">
+                <h3>Order Summary</h3>
+
+                <div class="summary-item">
+                    <img src="../images/aj1.png" class="product-thumb">
+                    <p>Nike AJ 1 High Chicago <br><span>Qty: 1</span></p>
+                    <strong>Rs. 32,999</strong>
+                </div>
+
+                <div class="summary-item">
+                    <img src="../images/adidas.png" class="product-thumb">
+                    <p>Adidas Spezial Blue Handball <br><span>Qty: 1</span></p>
+                    <strong>Rs. 14,499</strong>
+                </div>
+
+                <hr>
+                <div class="price-row">
+                    <span>Items</span>
+                    <span>3</span>
+                </div>
+
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span>Rs. 47,498</span>
+                </div>
+
+                <div class="price-row">
+                    <span>Shipping</span>
+                    <span>Rs. 200</span>
+                </div>
+                <div class="price-row">
+                    <span>Tax</span>
+                    <span>Rs. 300</span>
+                </div>
+
+
+                <div class="price-row total">
+                    <span>Total</span>
+                    <span>Rs. 47,998</span>
+                </div>
+
+                <button class="checkout-btn">Place Order</button>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER area-->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            <img src="../images/shoel.png" class="footer-img" />
+            <span class="footername">SoleKicks.</span>
+        </div>
+
+        <div class="footer-grid">
+
+            <div>
+                <h4>Quick Links</h4>
+                <a href="aboutus.html" style="color: gray;"><p class="para">About</p></a>
+                <a href="faqs.html" style="color: gray;"><p class="para">FAQs</p></a>
+                <p class="para">Terms</p>
+                <p class="para">Privacy & Policy</p>
+                <p class="para">Returns</p>
+            </div>
+
+            <div>
+                <h4>Contact Us</h4>
+                <p class="para icon-row"><img src="../images/mail.png" class="icon"> solekicks.pk@gmail.com</p>
+                <p class="para icon-row"><img src="../images/call.png" class="icon"> 051-999-089</p>
+                <p class="para icon-row"><img src="../images/loc.png" class="icon"> Opp. Ayub Park, Rawalpindi</p>
+            </div>
+
+            <div>
+                <h4>Social Media</h4>
+                <p class="para icon-row"><img src="../images/ig.png" class="icon"> Instagram</p>
+                <p class="para icon-row"><img src="../images/tw.png" class="icon"> Twitter</p>
+                <p class="para icon-row"><img src="../images/ln.png" class="icon"> LinkedIn</p>
+                <p class="para icon-row"><img src="../images/yt.png" class="icon"> YouTube</p>
+            </div>
+
+        </div>
+
+        <p class="copy">© All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
