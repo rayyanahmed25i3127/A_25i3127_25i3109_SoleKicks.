@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - SoleKicks</title>
+
+
+    <link rel="stylesheet" href="../css/faqs.css">
+
+</head>
+<body>
+
+ 
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="../images/shoel.png" class="logo-img" />
+            <span class="logo-text">SoleKicks.</span>
+        </div>
+
+        <div class="nav-mid">
+            <button class="search">
+                <img src="../images/search.png" class="search-icon">
+                Search here
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <a href="cart.html"><img src="../images/cart.png" class="cart"></a>
+            <img src="../images/account.png" class="circle">
+            <img src="../images/heart.png" class="heart">
+
+            <button class="btn" onclick="location.href='contact.html';">CONTACT US</button>
+            <button class="btn" onclick="location.href='home.html';">HOME</button>
+            <button class="btn" onclick="location.href='signup.html';">LOGIN</button>
+        </div>
+    </header>
+
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+
+        <h2 class="faq-title">FREQUENTLY ASKED QUESTIONS</h2>
+
+        <div class="faq-container">
+
+            <div class="faq-box">
+                <button class="faq-question">
+                    What is Solekicks?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    Solekicks is a website that sells premium as well as affordable shoes for all the sneakerheads as well as the old money lovers.
+                </div>
+            </div>
+
+            <div class="faq-box">
+                <button class="faq-question">
+                    Why should I choose Solekicks?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    Our pricing and our variety is what truly makes us different from other brands.
+                </div>
+            </div>
+
+            <div class="faq-box">
+                <button class="faq-question">
+                    Are the brands mentioned original?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    Our word of mouth and 30-days guarantee-back service proves that we sell only original shoes. We truly understand the emotions of shoe lovers.
+                </div>
+            </div>
+
+            <div class="faq-box">
+                <button class="faq-question">
+                    What are quizzes?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    Show your true knowledge of shoes and win different prizes of your own choice.
+                </div>
+            </div>
+
+            <div class="faq-box">
+                <button class="faq-question">
+                    Is it available internationally?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    Not currently, but we are planning to do so.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 🔥 YOUR FOOTER GOES HERE (paste your real footer code) -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            <img src="../images/shoel.png" class="footer-img" />
+            <span class="footername">SoleKicks.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <a href="aboutus.html" style="color: gray;"><p class="para">About</p></a>
+                <a href="#" style="color: gray;"><p class="para">FAQs</p></a>
+                <p class="para">Terms</p>
+                <p class="para">Privacy & Policy</p>
+                <p class="para">Returns</p>
+            </div>
+
+            <div>
+                <h4>Contact Us</h4>
+
+                <p class="para icon-row">
+                    <img src="../images/mail.png" class="icon">
+                    Email: solekicks.pk@gmail.com
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/call.png" class="icon">
+                    Phone: 051-999-089
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/loc.png" class="icon">
+                    Opposite Ayub National Park, Rawalpindi.
+                </p>
+            </div>
+
+            <div>
+                <h4>Social Media</h4>
+
+                <p class="para icon-row">
+                    <img src="../images/ig.png" class="icon">
+                    Instagram
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/tw.png" class="icon">
+                    Twitter
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/ln.png" class="icon">
+                    LinkedIn
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/yt.png" class="icon">
+                    YouTube
+                </p>
+            </div>
+        </div>
+
+        <p class="copy">© All rights reserved.</p>
+
+    </footer>
+
+
+    <!-- Link your JS file here 
+    <script src="faqs.js"></script> -->
+    <script>
+    const faqs = document.querySelectorAll('.faq-box');
+
+    faqs.forEach(faq => {
+        faq.querySelector('.faq-question').addEventListener('click', () => {
+            faq.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
