@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday Sneaker Quiz</title>
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body>
+
+<header class="navbar" style="height: 100px;">
+        <div class="nav-left">
+            <img src="../images/shoel.png" class="logo-img" />
+            <span class="logo-text">SoleKicks.</span>
+        </div>
+
+        <div class="nav-mid">
+            <button class="search">
+                <img src="../images/search.png" class="search-icon">
+                Search here
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <a href="cart.html"><img src="../images/cart.png" class="cart"></a>
+            <img src="../images/account.png" class="circle">
+            <img src="../images/heart.png" class="heart">
+
+            <button class="btn" onclick="location.href='contact.html';">CONTACT US</button>
+            <button class="btn" onclick="location.href='home.html';">HOME</button>
+            <button class="btn" onclick="location.href='signup.html';">LOGIN</button>
+        </div>
+    </header>
+
+<div class="container">
+
+    <h1 class="title">Friday Sneakerhead Quiz</h1>
+
+    <p class="intro">
+        Answer all 3 questions correctly and win a FREE SHOE of your choice!
+    </p>
+
+    <form id="quizForm">
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What year was the first Air Jordan released?</h3>
+            <label><input type="radio" name="q1" value="1984"> 1984</label><br>
+            <label><input type="radio" name="q1" value="1991"> 1991</label><br>
+            <label><input type="radio" name="q1" value="2001"> 2001</label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Which company creates the Yeezy sneaker line?</h3>
+            <label><input type="radio" name="q2" value="Nike"> Nike</label><br>
+            <label><input type="radio" name="q2" value="Adidas"> Adidas</label><br>
+            <label><input type="radio" name="q2" value="Puma"> Puma</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. What material is commonly used in premium sneaker uppers?</h3>
+            <label><input type="radio" name="q3" value="Leather"> Leather</label><br>
+            <label><input type="radio" name="q3" value="Plastic"> Plastic</label><br>
+            <label><input type="radio" name="q3" value="Paper"> Paper</label>
+        </div>
+
+        <button type="button" id="submitBtn">SUBMIT ANSWERS</button>
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<footer class="footer">
+
+        <div class="footer-logo">
+            <img src="../images/shoel.png" class="footer-img" />
+            <span class="footername">SoleKicks.</span>
+        </div>
+
+        <div class="footer-grid">
+
+            <!-- Quick Links -->
+            <div>
+                <h4>Quick Links</h4>
+                <a href="aboutus.html" style="color: gray;"><p class="para">About</p></a>
+                <a href="faqs.html" style="color: gray;"><p class="para">FAQs</p></a>
+                <p class="para">Terms</p>
+                <p class="para">Privacy & Policy</p>
+                <p class="para">Returns</p>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4>Contact Us</h4>
+
+                <p class="para icon-row">
+                    <img src="../images/mail.png" class="icon"> 
+                    Email: solekicks.pk@gmail.com
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/call.png" class="icon">
+                    Phone: 051-999-089
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/loc.png" class="icon">
+                    Opposite Ayub National Park, Rawalpindi.
+                </p>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h4>Social Media</h4>
+
+                <p class="para icon-row">
+                    <img src="../images/ig.png" class="icon">
+                    Instagram
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/tw.png" class="icon">
+                    Twitter
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/ln.png" class="icon">
+                    LinkedIn
+                </p>
+
+                <p class="para icon-row">
+                    <img src="../images/yt.png" class="icon">
+                    YouTube
+                </p>
+            </div>
+        </div>
+
+        <p class="copy">© All rights reserved.</p>
+    </footer>
+
+<!--java script for implementing the feature ( quiz ) -->
+<script>
+    document.getElementById("submitBtn").addEventListener("click", function() {
+
+        // correct answers (hard-coded)
+        const answers = {
+            q1: "1984",
+            q2: "Adidas",
+            q3: "Leather"
+        };
+
+        // get user's selections
+        const user1 = document.querySelector('input[name="q1"]:checked');
+        const user2 = document.querySelector('input[name="q2"]:checked');
+        const user3 = document.querySelector('input[name="q3"]:checked');
+
+        const resultBox = document.getElementById("result");
+
+        // check if all answered
+        if (!user1 || !user2 || !user3) {
+            resultBox.textContent = "Please answer all questions!";
+            resultBox.className = "warning";
+            return;
+        }
+
+        // verify correct
+        if (user1.value === answers.q1 &&
+            user2.value === answers.q2 &&
+            user3.value === answers.q3) 
+        {
+            resultBox.textContent = "🎉 Congratulations! You won a FREE SHOE of your choice!";
+            resultBox.className = "success";
+        } 
+        else {
+            resultBox.textContent = "❌ Unfortunately, not all answers are correct. Try again next Friday!";
+            resultBox.className = "error";
+        }
+    });
+</script>
+
+</body>
+</html>
